@@ -219,7 +219,7 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[ Created => BRINGAS FAMILY ]-===================="
+echo "=====================-[ Created => 🇮🇩DANSTORE🇮🇩 ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""
@@ -260,7 +260,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ Script Created By BRINGASS TUNNEL ]-==============="
+echo "===============-[ 🇮🇩 D A N S T O R E 🇮🇩 ]-===============" | lolcat
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
