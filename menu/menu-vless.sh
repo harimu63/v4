@@ -6,7 +6,7 @@ NC="\e[0m"
 RED="\033[0;31m" 
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/Bringas-tunnel/permission/main/ipmini > /root/tmp
+    curl -sS https://raw.githubusercontent.com/harimu63/ipkita/main/izin > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
