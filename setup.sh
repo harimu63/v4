@@ -175,7 +175,9 @@ echo -e "$green          Install UDP              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/harimu63/v4/main/udp/udp.sh && bash udp.sh
+wget https://raw.githubusercontent.com/harimu63/v4/main/udp/udp.sh && chmod +x udp.sh && ./udp.sh
+
+dp.sh
 clear
 
 cat> /root/.profile << END
