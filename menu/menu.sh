@@ -14,7 +14,7 @@
  clear
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/harimu63/permission/main/ipmini > /root/tmp
+    curl -sS https://raw.githubusercontent.com/harimu63/permission/main/MYIP > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -29,9 +29,9 @@ BURIQ () {
     fi
     done
     rm -f /root/tmp
-PERMISSION () {          #####
+{
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/harimu63/permission/main/ipmini | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/harimu63/permission/main/MYIP | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -48,7 +48,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/harimu63/permission/main/ipmini | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/harimu63/permission/main/MYIP | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -66,7 +66,7 @@ PERMISSION
 if [ "$res" = "Expired" ]; then
 Exp="\e[36mExpired\033[0m"
 else
-Exp=$(curl -sS https://raw.githubusercontent.com/harimu63/permission/main/ipmini | grep $MYIP | awk '{print $3}')
+Exp=$(curl -sS https://raw.githubusercontent.com/harimu63/permission/main/MYIP| grep $MYIP | awk '{print $3}')
 fi
 
 # // Exporting Language to UTF-8
