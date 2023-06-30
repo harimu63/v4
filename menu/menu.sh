@@ -1,4 +1,4 @@
- #!/bin/bash 
+#!/bin/bash 
  # ========================================= 
  vlx=$(grep -c -E "^#& " "/etc/xray/config.json") 
  let vla=$vlx/2
@@ -43,17 +43,17 @@ CekTwo=$(cat /etc/.$Name.ini)
         res="Expired"
     fi
 else
-res="ipkita Accepted..."
+res="Permission Accepted..."
 fi
 }
 
-ipkita () {
+PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
     IZIN=$(curl -sS https://raw.githubusercontent.com/harimu63/ipkita/main/izin | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
-    res="ipkita Denied!"
+    res="Permission Denied!"
     fi
     BURIQ
 }
@@ -62,7 +62,7 @@ green='\e[1;32m'
 NC='\e[0m'
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
-ipkita
+PERMISSION
 
 if [ "$res" = "Expired" ]; then
 Exp="\e[36mExpired\033[0m"
@@ -101,7 +101,7 @@ red='\e[31m'
 green='\e[32m'
 blue='\e[34m'
 PURPLE='\e[35m'
-cyan='\e[1;36m'
+cyan='\e[36m'
 Lred='\e[91m'
 Lgreen='\e[92m'
 Lyellow='\e[93m'
@@ -185,29 +185,29 @@ MYIP=$(curl -sS ipv4.icanhazip.com)
 # Color Validation
 DF='\e[39m'
 Bold='\e[1m'
-Blink='\e[1;5m'
-yell='\e[13;3m'
-red='\e[1;31m'
-green='\e[1;32m'
-blue='\e[1;34m'
-ungu='\e[1;35m'
-cyan='\e[1;36m'
-Lred='\e[1;91m'
+Blink='\e[5m'
+yell='\e[33m'
+red='\e[31m'
+green='\e[32m'
+blue='\e[34m'
+PURPLE='\e[35m'
+cyan='\e[36m'
+Lred='\e[91m'
 Lgreen='\e[92m'
 Lyellow='\e[93m'
 NC='\e[0m'
 GREEN='\033[0;32m'
 ORANGE='\033[0;33m'
 LIGHT='\033[0;37m'
-RED='\033[1;31m'
+RED='\033[0;31m'
 NC='\033[0m'
 yl='\e[32;1m'
-green='\033[1;32m'
-orange='\033[1;33m'
-blue='\033[1;34m'
-ungu='\033[1;35m'
-cyan='\033[1;36m'
-white='\033[1;37m'
+GREEN='\033[0;32m'
+ORANGE='\033[0;33m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+LIGHT='\033[0;37m'
 # VPS Information
 #Domain
 domain=$(cat /etc/xray/domain)
@@ -237,9 +237,6 @@ tyest="$(vnstat -i eth0 | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}
 dmon="$(vnstat -i eth0 -m | grep "`date +"%b '%y"`" | awk '{print $3" "substr ($4, 1, 1)}')"
 umon="$(vnstat -i eth0 -m | grep "`date +"%b '%y"`" | awk '{print $6" "substr ($7, 1, 1)}')"
 tmon="$(vnstat -i eth0 -m | grep "`date +"%b '%y"`" | awk '{print $9" "substr ($10, 1, 1)}')"
-# warna valid 
-green_background="\033[42;37m"
-red_background="\033[41;37m"
 # Getting CPU Information
 cpu_usage1="$(ps aux | awk 'BEGIN {sum=0} {sum+=$3}; END {print sum}')"
 cpu_usage="$((${cpu_usage1/\.*} / ${corediilik:-1}))"
@@ -256,29 +253,7 @@ freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
 tram=$( free -m | awk 'NR==2 {print $2}' )
 uram=$( free -m | awk 'NR==2 {print $3}' )
 fram=$( free -m | awk 'NR==2 {print $4}' )
-# // SSH Websocket Proxy 
-#Warna Teks Background
-Bhijau="\033[4;32m"
-Bmerah="\033[4;31m"
-Bkuning="\033[4;33m"
-Bputih="\033[4;37m"
-Kbiru="\033[1;36m" # kedip biru
-Bungu="\033[4;35m"
-Bcyan="\033[4;36m"
-Bhitam="\033[4;30m"
-#Warna Text 
-kuning="\e[1;33m"
-yellow="\e[1;33m"
-green="\e[1;32m"
-cyan="\e[1;36m"
-cyann="\e[1;36m"
-pu="\e[5;35m" # ungu kedip
-MK="\e[1;36m" # merah kedip
-whiteK="\e[5;37m"
-Kcyan="\e[1;36m"
-RB="\033[41;37m" #background merah
-Ucyan="\033[4;36m"
-#Status running 
+# // SSH Websocket Proxy
 ssh_ws=$( systemctl status ws-stunnel | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $ssh_ws == "running" ]]; then
     status_ws_epro="${GREEN}ON${NC}"
@@ -297,8 +272,8 @@ if [[ $nginx == "running" ]]; then
     status_nginx="${GREEN}ON${NC}"
 else
     status_nginx="${red}OFF${NC}"
-fi
-clear  
+    fi
+clear
                     figlet                                                                     'DANSTORE' | lolcat        
                     echo -e "${Kcyan}┌───────────────────────────────────────────┐${NC}" 
                     echo -e "${Kcyan}│${NC} ${white} IP VPS  ${NC}: $IPVPS"
