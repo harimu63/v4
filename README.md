@@ -1,5 +1,5 @@
 # SC MULTI PORT BOSS
-# Scripted By -: Danstore Tunnel
+# Scripted By -: Simple Tunnel
 # ######
 # ###- CODE INSTALL SCRIPT -#### #
 # TEP BY STEP INSTALL :
