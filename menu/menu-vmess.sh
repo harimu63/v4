@@ -83,10 +83,10 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 echo -e "   ${red_background}VMESS MENU${NC}"
 echo -e ""
-echo -e "        ${white}[•1]${NC} ${cyan}Create v2ray${NC}"
+echo -e "        ${white}[•1]${NC} ${cyan}Create Vmess${NC}"
 echo -e "        ${white}[•2]${NC} ${cyan}Create trial${NC}"
-echo -e "        ${white}[•3]${NC} ${cyan}Renew V2ray${NC}"
-echo -e "        ${white}[•4]${NC} ${cyan}Delete V2ray${NC}"
+echo -e "        ${white}[•3]${NC} ${cyan}Renew Akun${NC}"
+echo -e "        ${white}[•4]${NC} ${cyan}Delete Akun${NC}"
 echo -e "        ${white}[•5]${NC} ${cyan}Cek User Login${NC}"
 echo -e "        ${yelow}[•0]${NC} ${yelow}Back To Menu${NC}"
 echo -e "${yelow}"
