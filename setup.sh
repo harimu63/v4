@@ -1,4 +1,3 @@
-#!/bin/bash
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
@@ -61,15 +60,12 @@ if [ "" = "$PKG_OK" ]; then
   echo -e "[ ${tyblue}NOTES${NC} ] If error you need.. to do this"
   sleep 1
   echo ""
-  echo "=========================="
-  echo " INSTALL PACKAGES " | lolcat
-  echo "=========================="
-  sleep 4
+  sleep 1
   echo -e "[ ${green}NOTES${NC} ] 1. apt update -y"  
   echo -e "[ ${green}NOTES${NC} ] 2. apt upgrade -y"
   echo -e "[ ${green}NOTES${NC} ] 3. apt dist-upgrade -y"
   echo -e "[ ${green}NOTES${NC} ] 4. reboot"
-  sleep 2
+  sleep 1
   echo -e "[ ${green}NOTES${NC} ] After rebooting"
   echo -e "[ ${green}NOTES${NC} ] Then run this script again"
   echo -e "[ ${green}NOTES${NC} ] if you understand then tap enter now"
@@ -173,7 +169,6 @@ sleep 2
 clear
 wget https://raw.githubusercontent.com/Andyvpn/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
 clear
-
 #Instal udp
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green          Install UDP              $NC"
@@ -219,7 +214,7 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[ Created => 🇮🇩DANSTORE🇮🇩 ]-===================="
+echo "===============-[ Created => 🇮🇩DANSTORE🇮🇩 ]-================"
 echo ""
 echo "------------------------------------------------------------"
 echo ""
