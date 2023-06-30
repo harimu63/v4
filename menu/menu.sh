@@ -29,8 +29,7 @@ BURIQ () {
     fi
     done
     rm -f /root/tmp
-}
-
+PERMISSION () {          #####
 MYIP=$(curl -sS ipv4.icanhazip.com)
 Name=$(curl -sS https://raw.githubusercontent.com/harimu63/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
