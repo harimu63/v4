@@ -1,8 +1,8 @@
 #!/bin/bash
 # Welcome Information
 # Edition : Stable Edition V1.0
-# Author  : BRINGAS GROUP
-# (C) Copyright 2021-2022 By Bringas Tunnel
+# Author  : DANSTORE
+# (C) Copyright 2021-2022 By DANSTORE - ID
 # =========================================
 
 # // Exporting Language to UTF-8
