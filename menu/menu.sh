@@ -273,8 +273,7 @@ if [[ $nginx == "running" ]]; then
 else
     status_nginx="${red}OFF${NC}"
     fi
-clear
-        
+clear        
                     echo -e "${Kcyan}┌───────────────────────────────────────────┐${NC}" 
                     echo -e "${Kcyan}│${NC} ${white} IP VPS  ${NC}: $IPVPS"
                     echo -e "${Kcyan}│${NC} ${white} CPU     ${NC}: $cpu_usage"  
