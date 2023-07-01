@@ -1,9 +1,9 @@
+# 🇮🇩 DANZSTORE 🇮🇩
+#
 # MENDUKUNG OS : 
 # ubuntu 20 & 18
 # debian 10
-#
-# 🇮🇩 DANZSTORE 🇮🇩
-#
+#############
 # TEP BY STEP INSTALL :
 #
 # 1 ]
