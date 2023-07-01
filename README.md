@@ -1,5 +1,5 @@
 # 🇮🇩 DANZSTORE 🇮🇩
-# ▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️
+# ▫️▫️▫️▫️▫️▫️▫️
 # MENDUKUNG OS : 
 # ubuntu 20 & 18
 # debian 10
