@@ -2,7 +2,7 @@
 # ubuntu 20 & 18
 # debian 10
 #
-# 🇮🇩🇮🇩🇮🇩🇮🇩 DANZSTORE 🇮🇩🇮🇩🇮🇩🇮🇩
+# 🇮🇩 DANZSTORE 🇮🇩
 #
 # TEP BY STEP INSTALL :
 #
